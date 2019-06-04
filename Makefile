@@ -98,6 +98,7 @@ doc: manual.html performance.html
 
 $(TARGET): $(OBJS)
 	$(CC) $(LDFLAGS) $(CJSON_LDFLAGS) -o $@ $(OBJS)
+	cp $(TARGET) ../../luaclib/$(TARGET)
 
 install: $(TARGET)
 	mkdir -p $(DESTDIR)/$(LUA_CMODULE_DIR)
